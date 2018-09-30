@@ -25,7 +25,8 @@ prunetree2
 nrow(data)
 
 #Predict class category or probabilities
-(testdata = sample_n(data,2))
+library(dplyr)
+(testdata = sample_n(data,5))
 predict(prunetree2, newdata=testdata, type='class')
 predict(prunetree2, newdata=testdata, type='prob')
 
